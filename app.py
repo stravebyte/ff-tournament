@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect, request
 import pymongo
 from pymongo import MongoClient
 
-client = MongoClient("mongodb+srv://Stravecodes:ASh2LeaVounah7pu@strave.3nqbbea.mongodb.net/?retryWrites=true&w=majority&appName=Strave", ssl_cert_reqs=pymongo.ssl_match_hostname.CERT_NONE)
+client = MongoClient("mongodb+srv://Stravecodes:ASh2LeaVounah7pu@strave.3nqbbea.mongodb.net/?retryWrites=true&w=majority&appName=Strave", ssl=True, ssl_cert_reqs=ssl.CERT_NONE)
 
 db = client["FF"]
 collection = db["users"]
